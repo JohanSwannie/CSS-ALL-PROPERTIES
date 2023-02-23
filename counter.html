@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Property - counter</title>
+  <style>
+
+  h5 {
+    font-size: 40px;
+    font-feature-settings: "smcp", "zero";
+  }
+    .h2Control {
+      counter-reset: expert-cntr;
+    }
+
+    .pControl {
+      counter-reset: end-counter;
+    }
+
+
+    h2::before {
+      counter-increment: expert-cntr;
+      content: "Expert "counter(expert-cntr) ".  ";
+    }
+
+    p::before {
+      counter-increment: end-counter;
+      content: "Paragraph "counter(end-counter) ".  ";
+    }
+
+    #h3ForH2::before {
+      content: "End Counter for H2 is "counter(expert-cntr) ". ";
+    }
+
+    #h3ForP::before {
+      content: "End Counter for P is "counter(end-counter) ". ";
+    }
+  </style>
+</head>
+
+<body>
+
+   <h5>You can use Counter 100 times OVER again!</h5>
+  <div class="h2Control">
+    <h2>Professional Trumpet Player</h2>
+    <h2>Fishing Expert</h2>
+    <h2>Gym Fanatic</h2>
+    <h2>Coding Freek</h2>
+    <h2>Critical Thinker</h2>
+    <h2>Problem Solver</h2>
+  </div>
+  <div class="pControl">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam omnis vel enim quia atque cum non minus illum dolor minima, aut, expedita adipisci quasi impedit similique, sit amet velit perspiciatis!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam omnis vel enim quia atque cum non minus illum dolor minima, aut, expedita adipisci quasi impedit similique, sit amet velit perspiciatis!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam omnis vel enim quia atque cum non minus illum dolor minima, aut, expedita adipisci quasi impedit similique, sit amet velit perspiciatis!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam omnis vel enim quia atque cum non minus illum dolor minima, aut, expedita adipisci quasi impedit similique, sit amet velit perspiciatis!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam omnis vel enim quia atque cum non minus illum dolor minima, aut, expedita adipisci quasi impedit similique, sit amet velit perspiciatis!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam omnis vel enim quia atque cum non minus illum dolor minima, aut, expedita adipisci quasi impedit similique, sit amet velit perspiciatis!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam omnis vel enim quia atque cum non minus illum dolor minima, aut, expedita adipisci quasi impedit similique, sit amet velit perspiciatis!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam omnis vel enim quia atque cum non minus illum dolor minima, aut, expedita adipisci quasi impedit similique, sit amet velit perspiciatis!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam omnis vel enim quia atque cum non minus illum dolor minima, aut, expedita adipisci quasi impedit similique, sit amet velit perspiciatis!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam omnis vel enim quia atque cum non minus illum dolor minima, aut, expedita adipisci quasi impedit similique, sit amet velit perspiciatis!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam omnis vel enim quia atque cum non minus illum dolor minima, aut, expedita adipisci quasi impedit similique, sit amet velit perspiciatis!</p>
+  </div>
+  <h3 id='h3ForH2'>We have reached the END of h2Control!</h3>
+  <h3 id='h3ForP'>We have reached the END of pControl!</h3>
+
+</body>
+
+</html>

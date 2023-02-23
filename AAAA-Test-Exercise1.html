@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Test Exercise for Flipping Text</title>
+  <style>
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: navy;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .flipThemBuddy p {
+      display: inline-flex;
+      position: relative;
+      font-size: 80px;
+      color: orange;
+      animation: flipper 5s infinite linear;
+      animation-delay: calc(.05s * var(--x));
+    }
+
+  @keyframes flipper {
+    0%, 85% {
+      transform: rotateY(360deg);
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="flipThemBuddy">
+    <p style="--x:1">E</p>
+    <p style="--x:4">s</p>
+    <p style="--x:7">t</p>
+    <p style="--x:11">e</p>
+    <p style="--x:14">l</p>
+    <p style="--x:17">l</p>
+    <p style="--x:20">e</p>
+    <p style="--x:23">&nbsp &nbsp</p>
+    <p style="--x:26">d</p>
+    <p style="--x:29">r</p>
+    <p style="--x:32">i</p>
+    <p style="--x:35">v</p>
+    <p style="--x:38">e</p>
+    <p style="--x:41">s</p>
+    <p style="--x:47">&nbsp &nbsp</p>
+    <p style="--x:50">t</p>
+    <p style="--x:53">h</p>
+    <p style="--x:56">e</p>
+    <p style="--x:59">&nbsp &nbsp</p>
+    <p style="--x:62">T</p>
+    <p style="--x:65">o</p>
+    <p style="--x:68">y</p>
+    <p style="--x:71">o</p>
+    <p style="--x:74">t</p>
+    <p style="--x:77">a</p>
+    <p style="--x:80">&nbsp &nbsp</p>
+    <p style="--x:83">Y</p>
+    <p style="--x:86">a</p>
+    <p style="--x:89">r</p>
+    <p style="--x:92">i</p>
+    <p style="--x:95">s</p>
+  </div>
+
+</body>
+</html>

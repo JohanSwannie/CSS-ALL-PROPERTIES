@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Property - keyframes</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background: red;
+      position: relative;
+      animation: mymove 15s infinite;
+    }
+
+    @keyframes mymove {
+      0% {
+        top: 0px;
+        left: 0px;
+      }
+
+      12% {
+        top: 0px;
+        left: 1400px;
+      }
+
+      24% {
+        top: 550px;
+        left: 1400px;
+      }
+
+      36% {
+        top: 0px;
+        left: 0px;
+      }
+
+      48% {
+        top: 550px;
+        left: 0px;
+      }
+
+      60% {
+        top: 0px;
+        left: 1400px;
+      }
+
+      72% {
+        top: 550px;
+        left: 1400px;
+      }
+
+      84% {
+        top: 550px;
+        left: 0px;
+      }
+
+      100% {
+        top: 0px;
+        left: 0px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>The @keyframes Rule</h1>
+
+  <div></div>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Property - caret-color</title>
+<style>
+.example1 {
+  caret-color: red;
+}
+
+.example2 {
+  caret-color: transparent;
+}
+
+p {
+  background: darkgreen;
+  caret-color: black;
+  color: white;
+  font-weight: bold;
+  padding: 1rem;
+  border: 5px solid crimson;
+}
+
+#p2 {
+  background: skyblue;
+  color: black;
+}
+
+</style>
+</head>
+<body>
+
+<h1>The caret-color Property</h1>
+
+<input value="Default caret color"><br><br>
+
+<input class="example1" value="Custom caret color"><br><br>
+
+<input class="example2" value="Transparent caret color">
+
+<p id='p1' contenteditable onblur="showNewString()">Wat de Joos! </p>
+<p id='p2'></p>
+
+</body>
+
+<script>
+
+  function showNewString() {
+    let newString = document.getElementById('p1').innerHTML;
+    document.getElementById('p2').innerHTML = newString;;
+  }
+
+</script>
+</html>

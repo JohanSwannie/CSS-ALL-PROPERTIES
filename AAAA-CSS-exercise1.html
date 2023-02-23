@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Exercise 1</title>
+  <style>
+
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .main {
+      width: 1200px;
+      height: 550px;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: normal;
+      text-align: center;
+      border: 3px solid black;
+      justify-content: space-around;
+    }
+
+
+    .main div {
+      width: 200px;
+      height: 75px;
+      border: 1px solid #000;
+      line-height: 4;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h2 style="text-align: center; text-decoration: underline;">Align Properties</h2>
+    <div class="main">
+      <div class="boxes">box 1</div>
+      <div class="boxes">box 2</div>
+      <div class="boxes">box 3</div>
+      <div class="boxes">box 4</div>
+      <div class="boxes">box 5</div>
+      <div class="boxes">box 6</div>
+      <div class="boxes">box 7</div>
+      <div class="boxes special">box 8</div>
+      <div class="boxes">box 9</div>
+      <div class="boxes">box 10</div>
+      <div class="boxes">box 11</div>
+      <div class="boxes">box 12</div>
+      <div class="boxes">box 13</div>
+      <div class="boxes">box 14</div>
+      <div class="boxes">box 15</div>
+    </div>
+  </div>
+
+  <script>
+    const boxer = document.querySelectorAll('.boxes');
+
+    const colorDigitsArray = ['0', '1', '2', '3', '4', '5', '6', '7',
+                                  '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
+
+    let colorDigits = '#';
+    let colorArray = [];
+
+    function generateColor() {
+      for (var i = 0; i < 100; i++) {
+        for (let x = 0; x < 6; x++) {
+          let idx = Math.floor(Math.random() * 16)
+          let digit = colorDigitsArray[idx]
+          colorDigits += digit
+        }
+        colorArray.push(colorDigits);
+        colorDigits = '#';
+      }
+    }
+
+    generateColor();
+    console.log(colorArray);
+
+    boxer.forEach(item => {
+      item.style.backgroundColor = colorArray[Math.floor(Math.random() * colorArray.length)];
+    });
+
+  </script>
+
+</body>
+
+</html>

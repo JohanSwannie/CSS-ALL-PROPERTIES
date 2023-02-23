@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .container1 {
+      position: static;
+      position: sticky;
+      left: 100px;
+      top: 150px;
+      width: 350px;
+      height: 200px;
+      border: 3px solid navy;
+      margin-bottom: 50px;
+    }
+
+    .container3 {
+      width: 550px;
+      height: 700px;
+      border: 3px solid navy;
+      margin-bottom: 50px;
+    }
+
+    .container2 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 7rem;
+      height: 3rem;
+      border: 3px solid navy;
+    }
+
+    .container3 {
+      position: static;
+      margin-bottom: 100px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>The position Property</h1>
+
+  <h2 style="position: absolute; top: 70px; left: 50px;">This is a heading with an absolute position</h2>
+
+  <div class="container1">I am Sticky</div>
+  <div class="container2">I am Fixed</div>
+  <div class="container3">I am Static</div>
+
+  <p>With absolute positioning, an element can be placed anywhere on a page. The heading below is placed 100px from the left of the page and 150px from the top of the page.</p>
+
+</body>
+
+</html>

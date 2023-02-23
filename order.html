@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Property - order</title>
+  <style>
+    #main {
+      width: 1400px;
+      height: 400px;
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      line-height: 100px;
+      background: rgba(0, 0, 0, .3);
+      border: solid rgba(15, 25, 100, .6);
+    }
+
+    #main div {
+      width: 200px;
+      height: 100px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      word-spacing: 5px;
+      border: 2.5px solid #000;
+    }
+
+    div#myRedDIV {
+      -webkit-order: 2;
+    }
+
+    div#myBlueDIV {
+      -webkit-order: 4;
+    }
+
+    div#myGreenDIV {
+      -webkit-order: 3;
+    }
+
+    div#myPinkDIV {
+      -webkit-order: 1;
+    }
+
+    div#myRedDIV {
+      order: 2;
+    }
+
+    div#myBlueDIV {
+      order: 4;
+    }
+
+    div#myGreenDIV {
+      order: 3;
+    }
+
+    div#myPinkDIV {
+      order: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1 style="text-align: center">The order Property</h1>
+
+  <div id="main">
+    <div style="background-color:coral;" id="myRedDIV">Coral King</div>
+    <div style="background-color:lightblue;" id="myBlueDIV">Blue Bubble</div>
+    <div style="background-color:lightgreen;" id="myGreenDIV">Greeny</div>
+    <div style="background-color:pink;" id="myPinkDIV">Pinky</div>
+  </div>
+
+  <p><b>Note:</b> Internet Explorer 10 and earlier versions do not support the order property.</p>
+
+  <p><b>Note:</b> Safari 6.1 (and newer) supports an alternative, the -webkit-order property.</p>
+
+</body>
+
+</html>

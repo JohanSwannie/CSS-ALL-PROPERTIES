@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flip Text Animation</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Monoton:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Sofia:wght@700&display=swap');
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #111F3C;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .flippyTheFlipper p {
+      font-family: 'Sofia', cursive;
+      display: inline-flex;
+      position: relative;
+      font-size: 60px;
+      color: #F24130;
+      animation: flipIt 12s infinite;
+      animation-delay: calc(.05s * var(--x));
+    }
+
+    @keyframes flipIt {
+      0% {
+        transform: rotateY(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flippyTheFlipper">
+    <p style="--x:1">a</p>
+    <p style="--x:5">n</p>
+    <p style="--x:9">o</p>
+    <p style="--x:13">t</p>
+    <p style="--x:17">h</p>
+    <p style="--x:21">e</p>
+    <p style="--x:25">r</p>
+    <p style="--x:29">&nbsp &nbsp</p>
+    <p style="--x:33">d</p>
+    <p style="--x:37">a</p>
+    <p style="--x:41">y</p>
+    <p style="--x:45">&nbsp &nbsp</p>
+    <p style="--x:49">a</p>
+    <p style="--x:53">t</p>
+    <p style="--x:57">&nbsp &nbsp</p>
+    <p style="--x:61">t</p>
+    <p style="--x:65">h</p>
+    <p style="--x:69">e</p>
+    <p style="--x:73">&nbsp &nbsp</p>
+    <p style="--x:77">o</p>
+    <p style="--x:81">f</p>
+    <p style="--x:85">f</p>
+    <p style="--x:89">i</p>
+    <p style="--x:94">c</p>
+    <p style="--x:99">e</p>
+  </div>
+</body>
+
+</html>
